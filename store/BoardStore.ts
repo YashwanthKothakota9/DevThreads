@@ -1,4 +1,4 @@
-import { databses } from '@/appwrite';
+import { databases } from '@/appwrite';
 import { getTodosGroupedByColumn } from '@/lib/getTodosGroupedByColumn';
 import { create } from 'zustand'
 
@@ -31,9 +31,9 @@ export const useBoardStore = create<BoardState>((set) => ({
   },
 
   updateTodoInDB: async (todo:Todo,columnId:TypedColumn)=>{
-      await databses.updateDocument(
+      await databases.updateDocument(
         process.env.NEXT_PUBLIC_DATABASE_ID!,
-        process.env.NEXT_PUBLIC_TODO_COLLECTION_ID!,
+        process.env.NEXT_PUBLIC_TODOS_COLLECTION_ID!,
         todo.$id,
         {
           title:todo.title,

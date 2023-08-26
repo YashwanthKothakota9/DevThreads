@@ -5,8 +5,8 @@ const client = new Client()
 .setProject(process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID!) 
 
 const account = new Account(client)
-const databses = new Databases(client)
+const databases = new Databases(client)
 const storage = new Storage(client)
 
 
-export {client,account,databses,storage,ID}
+export {client,account,databases,storage,ID}
